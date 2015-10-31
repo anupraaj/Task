@@ -12,10 +12,28 @@
 
 <body ng-controller="TimeController as time">
     <h1>Timings</h1>
-    <div ng-repeat="getTime in time.timings">
-        <blockquote><strong>Monday - Friday</strong> : {{getTime.mfrom}} to {{getTime.mto}} and {{getTime.efrom}} to {{getTime.eto}}
-            <br/>
-            <strong>Saturday - Sunday</strong> : {{getTime.weekends}}
+    <div ng-repeat="getime in timings">
+        <blockquote>
+            <p>{{geti.name}}</p>
+            <div ng-repeat="m in getime.mon">
+
+                {{m.from}} to {{m.to}}
+            </div>
+            <div ng-repeat="t in getime.tue">
+                {{t.from}} to {{t.to}}
+            </div>
+            <div ng-repeat="w in getime.wed">
+                {{w.from}} to {{w.to}}
+            </div>
+            <div ng-repeat="th in getime.thu">
+                {{th.from}} to {{th.to}}
+            </div>
+            <div ng-repeat="t in getime.tue">
+                {{t.from}} to {{t.to}}
+            </div>
+            <div ng-repeat="f in getime.fri">
+                {{f.from}} to {{f.to}}
+            </div>
         </blockquote>
 
     </div>
