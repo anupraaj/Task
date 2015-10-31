@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="timeApp">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body ng-controller="TimeController as time">
+    <h1>Timings</h1>
+    <div ng-repeat="getTime in time.timings">
+        <blockquote><strong>Monday - Friday</strong> : {{getTime.mfrom}} to {{getTime.mto}} and {{getTime.efrom}} to {{getTime.eto}}
+            <br/>
+            <strong>Saturday - Sunday</strong> : {{getTime.weekends}}
+        </blockquote>
+
+    </div>
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
